@@ -1,23 +1,30 @@
 from langchain.messages import  HumanMessage, SystemMessage
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEndpoint, HuggingFaceEndpointEmbeddings, ChatHuggingFace
+from langchain_community.vectorstores import Chroma
 from config import HUGGINGFACEHUB_API_TOKEN
 from app.documents import load_documents
-from app.chroma import get_chroma_setting, create_vectorstore
 
 def split_docs_chunk(docs):
     splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
     docs_split = splitter.split_documents(docs)
     return docs_split
 
-def get_embedding(query: str):
+def get_embedding():
     hf = HuggingFaceEndpointEmbeddings(
         model="sentence-transformers/all-mpnet-base-v2",
         task="feature-extraction",
         huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN,
     )
     return hf
-    # return hf.embed_documents(query)
+
+def create_vectorstore(documents, embedding):
+   vectorstore = Chroma.from_documents(
+        documents=documents,
+        embedding=embedding,
+        collection_name="my_langchain_collection"
+    )
+   return vectorstore
 
 def get_chat_model():
     llm = HuggingFaceEndpoint(
@@ -34,10 +41,10 @@ def get_chat_model():
 
 def get_retrieval(query: str):
     docs = load_documents()
-    embedding = get_embedding(query=query)
+    embedding = get_embedding()
 
-    client = get_chroma_setting()
-    vectorstore = create_vectorstore(client, docs, embedding)
+    # client = get_chroma_setting()
+    vectorstore = create_vectorstore(docs, embedding)
     results = vectorstore.similarity_search(query, k=2)
     return results
 
