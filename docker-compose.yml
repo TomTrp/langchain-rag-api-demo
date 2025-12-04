@@ -1,11 +1,14 @@
 services:
   app:
     build: .
-    container_name: llm-rag-fastapi-app
+    container_name: langchain-rag-fastapi-app
     ports:
       - "8000:8000" # FastAPI on host 8000
     environment:
        - HUGGINGFACEHUB_API_TOKEN=${HUGGINGFACEHUB_API_TOKEN}
+       - DOCS_PATH=${DOCS_PATH}
+       - CHROMA_HOST=${CHROMA_HOST}
+       - CHROMA_PORT=${CHROMA_PORT}
     volumes:
       - ./docs:/app/docs
       - ./chroma_db:/app/chroma_db
