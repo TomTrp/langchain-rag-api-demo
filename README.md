@@ -59,20 +59,7 @@ Each .txt file will be automatically loaded and embedded into Chroma.
 - Example Response:
 ```json
 {
-  "response": "Ingredients
-  1 quart strawberries, hulled
-  2 fresh peaches - peeled, pitted, and sliced
-  1 banana, broken into chunks
-  2 cups ice
-  1 cup orange-peach-mango juice
-
-Directions
-  step 1
-   Gather all ingredients.
-  step 2
-   Combine strawberries, peaches, and banana in a blender; blend until smooth.
-  step 3
-   Add ice and pour in juice; blend again to desired consistency."
+  "response": "Ingredients\n1 quart strawberries, hulled\n2 fresh peaches - peeled, pitted, and sliced\n1 banana, broken into chunks\n1 banana, broken into chunks\n 2 cups ice\n1 cup orange-peach-mango juice\n\nDirections\nstep 1\nGather all ingredients.\nstep 2\nCombine strawberries, peaches, and banana in a blender; blend until smooth.\nstep 3\nAdd ice and pour in juice; blend again to desired consistency."
 }
 
 ### 5. (Optional) Run with Docker
