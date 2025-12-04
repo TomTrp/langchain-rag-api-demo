@@ -24,9 +24,9 @@ It allows you to upload or store text documents, embed them into a vector store,
 - Create a .env file in the project root:
 ```
   HUGGINGFACEHUB_API_TOKEN=hf_your_token_here
-  DOCS_PATH=./docs
-  CHROMA_HOST=chroma
-  CHROMA_PORT=8000
+DOCS_PATH=./docs
+CHROMA_HOST=chroma
+CHROMA_PORT=8000
 ```
   You can get your Hugging Face token here → [HuggingFace](https://huggingface.co/settings/tokens)
   
