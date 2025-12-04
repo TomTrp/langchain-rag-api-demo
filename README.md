@@ -47,7 +47,7 @@ Each .txt file will be automatically loaded and embedded into Chroma.
 - Open your browser at: 
     [Swagger UI](http://localhost:8000/docs)
 - Available endpoints:
-
+```
 | Method | Endpoint | Description |
 |---|---|---|
 | `GET` | `/health` | Health check |
@@ -56,7 +56,6 @@ Each .txt file will be automatically loaded and embedded into Chroma.
 
 - Example JSON Request:
   /ask?question=How to make smoothies
-```
 
 - Example Response:
 ```json
@@ -76,7 +75,6 @@ Directions
   step 3
    Add ice and pour in juice; blend again to desired consistency."
 }
-```
 
 ### 5. (Optional) Run with Docker
 - Build and run via Docker Compose:
