@@ -61,6 +61,7 @@ Each .txt file will be automatically loaded and embedded into Chroma.
 {
   "response": "Ingredients\n1 quart strawberries, hulled\n2 fresh peaches - peeled, pitted, and sliced\n1 banana, broken into chunks\n1 banana, broken into chunks\n 2 cups ice\n1 cup orange-peach-mango juice\n\nDirections\nstep 1\nGather all ingredients.\nstep 2\nCombine strawberries, peaches, and banana in a blender; blend until smooth.\nstep 3\nAdd ice and pour in juice; blend again to desired consistency."
 }
+```
 
 ### 5. (Optional) Run with Docker
 - Build and run via Docker Compose:
