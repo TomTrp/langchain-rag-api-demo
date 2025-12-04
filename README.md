@@ -47,7 +47,6 @@ Each .txt file will be automatically loaded and embedded into Chroma.
 - Open your browser at: 
     [Swagger UI](http://localhost:8000/docs)
 - Available endpoints:
-```
 | Method | Endpoint | Description |
 |---|---|---|
 | `GET` | `/health` | Health check |
