@@ -15,7 +15,9 @@ It allows you to upload or store text documents, embed them into a vector store,
 ### 1. Install Required Tools
 - Python 3.10 or higher
 - Required Python packages:
+  
   `pip install fastapi uvicorn langchain langchain-community langchain-huggingface langchain-text-splitters pydantic chromadb`
+  
 **Note**: This version uses HuggingFace Inference API, so **no local PyTorch or sentence-transformers installation** is required.
 
 ### 2. Setup Environment Variables
