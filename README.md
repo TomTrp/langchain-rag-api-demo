@@ -23,7 +23,7 @@ It allows you to upload or store text documents, embed them into a vector store,
 ### 2. Setup Environment Variables
 - Create a .env file in the project root:
 ```
-  HUGGINGFACEHUB_API_TOKEN=hf_your_token_here
+HUGGINGFACEHUB_API_TOKEN=hf_your_token_here
 DOCS_PATH=./docs
 CHROMA_HOST=chroma
 CHROMA_PORT=8000
@@ -34,9 +34,9 @@ CHROMA_PORT=8000
 - Place your text documents inside the /docs directory.
 Example:
 ```
-    docs/
-     ├── cake-recipe.txt
-     └── smoothie-recipe.txt
+docs/
+  ├── cake-recipe.txt
+  └── smoothie-recipe.txt
 ```
 Each .txt file will be automatically loaded and embedded into Chroma.
 
